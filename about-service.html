@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title data-i18n="about_service_title_page">서비스 소개</title>
+    <link rel="stylesheet" href="./static/styles_v3.css">
+    <script src="./static/lang.js"></script>
+</head>
+<body>
+<header>
+    <h1>
+        <a href="./index.html" style="color: white; text-decoration: none;" data-i18n="site_title">BirdFluAI</a>
+    </h1>
+
+    <nav class="top-nav">
+        <ul class="main-nav">
+            <li><a href="./about-ai.html" data-i18n="menu_about_ai">조류인플루엔자</a></li>
+            <li><a href="./about-service.html" data-i18n="menu_about_service">서비스</a></li>
+        </ul>
+        <div id="lang-switch">
+            <label for="lang-select" class="visually-hidden" data-i18n="label_language_select">언어 선택</label>
+            <select id="lang-select" onchange="changeLang(this.value)">
+                <option value="ko">한국어</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="ad-container">
+        <div class="ad-left" data-i18n="ad_left">Ad Space (Left)</div>
+
+        <div id="container">
+            <section>
+                <h2 data-i18n="about_service_title">BirdFluAI 서비스 소개</h2>
+                <p data-i18n="about_service_intro">
+                    <strong>BirdFluAI</strong>는 고병원성 조류인플루엔자(HPAI) 발생 정보를 기반으로 한 시각화 및 분석 플랫폼입니다.
+                </p>
+            </section>
+
+            <section>
+                <h3 data-i18n="about_service_features_title">주요 기능</h3>
+                <ul>
+                    <li data-i18n="about_service_feature_1">지도 기반 발생 위치 실시간 시각화</li>
+                    <li data-i18n="about_service_feature_2">기간 필터링 및 종별 필터</li>
+                    <li data-i18n="about_service_feature_3">최신 보고서 정보 표시</li>
+                    <li data-i18n="about_service_feature_4">시즌별 통계 분석</li>
+                    <li data-i18n="about_service_feature_5">데이터 저장 및 공유 기능 (추가 예정)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3 data-i18n="about_service_data_sources_title">데이터 출처</h3>
+                <p data-i18n="about_service_data_sources_text">
+                    WAHIS, 대한민국 질병관리청, 농림축산검역본부 등 공공 기관에서 제공하는 자료를 가공하여 사용합니다.
+                </p>
+            </section>
+
+            <section>
+                <h3 data-i18n="about_service_future_plans_title">향후 계획</h3>
+                <ul>
+                    <li data-i18n="about_service_plan_1">AI 예측 모델 도입</li>
+                    <li data-i18n="about_service_plan_2">위험도 기반 지역 경고 시스템</li>
+                    <li data-i18n="about_service_plan_3">다국어 인터페이스 제공</li>
+                </ul>
+            </section>
+            
+        </div>
+
+        <div class="ad-right" data-i18n="ad_right">Ad Space (Right)</div>
+    </div>
+</main>
+
+<footer>
+  <p>
+    © 2025 
+    <a href="https://www.aikoreainc.com" target="_blank" rel="noopener noreferrer">
+      AI Korea Inc.
+    </a> 
+    | aikoreainc@gmail.com
+  </p>
+</footer>
+</body>
+</html>

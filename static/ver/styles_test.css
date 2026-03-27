@@ -1,0 +1,93 @@
+:root {
+    --primary-color: #1E3A8A;
+    --secondary-color: #F3F4F6;
+    --accent-color: #F97316;
+    --text-color: #4B5563;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.template-links {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.template-links h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.template-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.template-links ul li {
+    margin: 20px 0; /* 항목 간 여백 증가 */
+    text-align: left; /* 설명을 위해 좌측 정렬 */
+}
+
+.template-links ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.template-links ul li a:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.template-links ul li p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.template-links p a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.template-links p a:hover {
+    color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

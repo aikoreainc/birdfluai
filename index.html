@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BirdFluAI</title>
+    <link rel="stylesheet" href="./static/styles_v3.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="./static/scripts_v3.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNSNFJK6NZ"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7106683688503781"
+    crossorigin="anonymous"></script>
+    <script src="./static/lang.js"></script>
+    <script src="./static/card_translations.js"></script>
+    <meta name="naver-site-verification" content="90f1269ecc2ef50940bb9adcc1222b14af1f89ea" />
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-YNSNFJK6NZ');
+
+        document.addEventListener("DOMContentLoaded", function () {
+        const today = new Date().toISOString().split("T")[0];
+
+        // 기본값 설정
+        document.getElementById("end-date").value = today;
+        document.getElementById("end-date").max = today;
+        });
+    </script>
+</head>
+<body>
+<header>
+    <h1>
+        <a href="/" style="color: white; text-decoration: none;" data-i18n="site_title">BirdFluAI</a>
+    </h1>
+
+    <nav class="top-nav">
+        <ul class="main-nav">
+            <li><a href="./about-ai.html" data-i18n="menu_about_ai">AI 소개</a></li>
+            <li><a href="./about-service.html" data-i18n="menu_about_service">서비스 소개</a></li>
+        </ul>
+        <div id="lang-switch">
+            <label for="lang-select" class="visually-hidden">언어 선택</label>
+            <select id="lang-select" onchange="changeLang(this.value)">
+                <option value="ko">한국어</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="ad-container">
+        <div class="ad-left">Ad Space (Left)</div>
+        <div id="container">
+            <div class="map-container">
+                <div id="map" class="desktop-map"></div>
+                <div class="mobile-map">
+                    <img src="./static/map-placeholder.png" alt="Avian Influenza Map" />
+                    <div class="map-summary">
+                        <p>Top Outbreaks:</p>
+                        <ul>
+                            <li>Germany: H5N1 (2024/12/16)</li>
+                            <li>Albania: H5N1 (2024/12/27)</li>
+                            <li>France: H5 (2024/12/23)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map-date-info">
+                    <p>Last Updated: <span id="last-updated">Loading...</span></p>
+                </div>
+                <div class="filter-container-map">
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" value="2025-01-01">
+
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date" value="2025-10-13">
+
+                    <label for="category-select">Category:</label>
+                    <select id="category-select" onchange="updateMap()">
+                        <option value="all" data-i18n="filter_all">전체</option>
+                        <option value="가금" data-i18n="filter_poultry">가금</option>
+                        <option value="야생조료" data-i18n="filter_wildbirds">야생조료</option>
+                        <option value="포유류" data-i18n="filter_mammals">포유류</option>
+                    </select>
+
+                    <button onclick="updateMap()">Update Map</button>
+                </div>
+                <div class="ad-bottom">Ad Space (Bottom)</div>
+            </div>
+
+            <!-- Latest Case Cards -->
+            <div id="cards-container" class="card-list"></div>
+            <div id="pagination" class="pagination-container"></div>
+        </div>
+        <div class="ad-right">Ad Space (Right)</div>
+    </div>
+</main>
+<footer>
+  <p>
+    © 2025 
+    <a href="https://www.aikoreainc.com" target="_blank" rel="noopener noreferrer">
+      AI Korea Inc.
+    </a> 
+    | aikoreainc@gmail.com
+  </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,121 @@
+:root {
+    --primary-color: #374151;
+    --secondary-color: #FFFFFF;
+    --accent-color: #3B82F6;
+    --text-color: #1F2937;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #F9FAFB, #E5E7EB);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-container {
+    position: relative;
+}
+
+.filter-container-map {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+.filter-container-map input,
+.filter-container-map button {
+    padding: 5px 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.filter-container-map button {
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+}
+
+.filter-container-map button:hover {
+    background-color: #2563EB;
+}
+
+#map {
+    height: 600px;
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.info-section,
+.latest-section {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.info-section h2,
+.latest-section h2 {
+    color: var(--primary-color);
+}
+
+.latest-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.latest-section ul li {
+    background-color: #F3F4F6;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.latest-section ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.latest-section ul li a:hover {
+    color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    #map {
+        height: 400px;
+    }
+}
